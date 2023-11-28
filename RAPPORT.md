@@ -33,7 +33,7 @@
 
 ## :dart: About ##
 
-Il s'agit d'une petite application classique d'ajout de notes(ou de tâches). Le projet comporte une partie API(faite en Golang) et une partie web app(faite avec flutter)
+Il s'agit d'une petite application classique d'ajout de notes. Le projet comporte une partie API(faite en Golang) et une partie web app(faite avec flutter)
 
 
 
@@ -51,7 +51,7 @@ Les technologies utilisées sur ce projet:
 L'API se trouve dans le dossier todo_api du projet et comporte plusieurs fichiers.
 
 - Un fichier main.go qui est le point d'entrée(le fichier principale) de l'API
-- Un fichier .env qui contient différents variables d'environnement qui définissent les paramètres de connexion à la base de données postgresql `DB_USER=YOUR_DB_USER` `DB_PASSWORD=YOUR_DB_PASSWORD` `DB_HOST=localhost` `DB_PORT=5432` `DB_NAME=YOUR_DB_NAME`
+- Un fichier .env qui contient différents variables d'environnement qui définissent les paramètres de connexion à la base de données postgresql `DB_USER=YOUR_DB_USER` `DB_PASSWORD=YOUR_DB_PASSWORD` `DB_HOST=localhost` si le projet est lancé en local et `DB_HOST=postgres` si le projet est lancé avec docker `DB_PORT=5432` `DB_NAME=YOUR_DB_NAME`
 - Un fichier db.go qui gère la connexion à la base de données postgresql
 - Un fichier models.go qui contient les modèles de l'API
 - Un fichier routes.go qui contient toutes les routes de l'API
@@ -120,7 +120,7 @@ L'API se trouve dans le dossier todo_api du projet et comporte plusieurs fichier
 :heavy_check_mark: Vue globale des notes en cours et effectuées;\
 
 - La web app utilise une architecture modèle-view-viewmodel-services.
-- Le dossier services contient une fichier noteService.dart qui contient des fonctions qui permettent de faire des requêtes http vers l'API GO. Ensuite dans le dossier viewModels on a un fichier notesVieWModel.dart qui utilise NoteService pour récupérer les notes, ajouter une note, modifier ou supprimer une note. Dans le dossier views on a les vues qui affichent les données ces vues en utilisant à leur tour les viewModels.
+- Le dossier services contient une fichier noteService.dart qui contient des fonctions qui permettent de faire des requêtes http vers l'API GO. Ensuite dans le dossier viewModels on a un fichier notesVieWModel.dart qui utilise NoteService pour récupérer les notes, ajouter une note, modifier ou supprimer une note. Dans le dossier views on a les vues qui affichent les données en utilisant à leur tour les viewModels.
 - La web app est responsive
 - On a un DockerFile pour la web app
 
@@ -140,12 +140,14 @@ $ cd projet-to-do-epseed-test
 
 # Démarrer docker sur votre système
 
+# Ouvrir une invite de commande ou powershell en mode administrateur pour éviter certains problèmes d'accès si vous êtes sun système d'exploitation Windows
+
 # Démarrer le projet avec docker
 $ docker-compose up --build
 
-# Trois conteneurs(l'api, le frontend et une base de données postgresq) seront crées
+# Après l'exécution de de la commande précédente, trois conteneurs(l'api, le frontend et une base de données postgresq) seront crées
 
-# Suffira donc de lancer la web app
+# Suffira donc de lancer la web app dans votre navigateur : http://localhost:8081/
 ```
 
 
