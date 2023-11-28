@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  # Service pour l'API Go
+  api:
+    build:
+      context: ./todo_api 
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - mynetwork
+
+  # Service pour l'application Flutter Web
+  flutter_app:
+    build:
+      context: ./todo_web_app  
+    ports:
+      - "8081:80"  
+    networks:
+      - mynetwork
+
+  # Service pour la base de données PostgreSQL
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: todo_db
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
