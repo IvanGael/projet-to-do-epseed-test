@@ -7,7 +7,7 @@ class LottieNoDataAnimation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Lottie.asset(
-      "animations/no-notes.json",
+      "assets/animations/no-notes.json",
       width: double.infinity,
       height: 200,
       fit: BoxFit.contain,
