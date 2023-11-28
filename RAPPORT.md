@@ -52,7 +52,7 @@ L'API se trouve dans le dossier todo_api du projet et comporte plusieurs fichier
 
 - Un fichier main.go qui est le point d'entrée(le fichier principale) de l'API
 - Un fichier .env qui contient différents variables d'environnement qui définissent les paramètres de connexion à la base de données postgresql `DB_USER=YOUR_DB_USER` `DB_PASSWORD=YOUR_DB_PASSWORD` `DB_HOST=localhost` `DB_PORT=5432` `DB_NAME=YOUR_DB_NAME`
-- Un fichier db.go qui gère la connexion à la base de donnée postgresql
+- Un fichier db.go qui gère la connexion à la base de données postgresql
 - Un fichier models.go qui contient les modèles de l'API
 - Un fichier routes.go qui contient toutes les routes de l'API
 - Un fichier note.services.go qui contient les fonctions qui gère l'action derrière chaque route(GET,POST,PUT, DELETE) de l'API
