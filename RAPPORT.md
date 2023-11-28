@@ -119,8 +119,8 @@ L'API se trouve dans le dossier todo_api du projet et comporte plusieurs fichier
 :heavy_check_mark: Ajout/Modification/Suppression de notes;\
 :heavy_check_mark: Vue globale des notes en cours et effectuées;\
 
--La web app utilise une architecture modèle-view-viewmodel-services.
--Le dossier services contient une fichier noteService.dart qui contient des fonctions qui permettent de faire desrequêtes http vers l'API GO. Ensuite dans le dossier viewModels on a un fichier notesVieWModel.dart qui utilise NoteService pour récupérer les notes, ajouter une note, modifier ou supprimer une note. Dans le dossier views on les vues qui affichent les données. Ces vues utilisent à leur tour les viewModels.
+- La web app utilise une architecture modèle-view-viewmodel-services.
+- Le dossier services contient une fichier noteService.dart qui contient des fonctions qui permettent de faire desrequêtes http vers l'API GO. Ensuite dans le dossier viewModels on a un fichier notesVieWModel.dart qui utilise NoteService pour récupérer les notes, ajouter une note, modifier ou supprimer une note. Dans le dossier views on les vues qui affichent les données. Ces vues utilisent à leur tour les viewModels.
 - On a un DockerFile pour la web app
 
 
